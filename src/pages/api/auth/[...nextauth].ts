@@ -4,10 +4,16 @@ import GoogleProvider from "next-auth/providers/google";
 import GitHubProvider from "next-auth/providers/github";
 import DiscordProvider from "next-auth/providers/discord";
 import TwitterProvider from "next-auth/providers/twitter";
+import Auth0Provider from "next-auth/providers/auth0";
 
 export default NextAuth({
   secret: process.env.NEXTAUTH_SECRET,
   providers: [
+    Auth0Provider({
+      clientId: process.env.AUTH0_CLIENT_ID as string,
+      clientSecret: process.env.AUTH0_CLIENT_SECRET as string,
+      issuer: process.env.AUTH0_ISSUER,
+    }),
     GoogleProvider({
       clientId: process.env.GOOGLE_ID as string,
       clientSecret: process.env.GOOGLE_SECRET as string,
