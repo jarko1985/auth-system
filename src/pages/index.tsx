@@ -9,7 +9,6 @@ export default function Home() {
   const text2: string =
     "In this build we used React js, Next js, Mongodb, Mongoose, Typecript, Next auth,React-hook-form, Zod,Axios, Nodemailer, Smtp service, Gmail stmp, Axios, React-toastify, Zxcvbn, Handlebars, BcryptJs...";
   const { data: session } = useSession();
-  console.log(session);
   return (
     <>
       <div className="home bg-black text-white min-h-screen flex items-center justify-center">

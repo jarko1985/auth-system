@@ -13,12 +13,12 @@ export default function auth() {
             </h2>
             <p className="text-center text-gray-600 mt-2 space-x-2">
               Already have an account? &nbsp;
-              <a
+              <Link
                 href="/"
                 className="text-blue-600 hover:text-blue-700 hover:underline cursor-pointer"
               >
                 Sign in
-              </a>
+              </Link>
             </p>
             <RegisterForm />
           </div>
