@@ -4,6 +4,7 @@ import * as handlebars from "handlebars";
 export default async function sendMail(
   to: string,
   name: string,
+  image: string,
   url: string,
   subject: string,
   template: string

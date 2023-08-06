@@ -14,7 +14,7 @@ export default function Home() {
       <div className="home bg-black text-white min-h-screen flex items-center justify-center">
         <div className="mx-auto">
           <div className="border border-white relative flex flex-col w-full rounded-lg">
-            <div className="flex flex-wrap justify-center items-center">
+            <div className="flex flex-wrap justify-center items-center flex-col">
               <div className="w-full text-right">
                 <div className="py-6 px-3 text-center">
                   <button
@@ -55,7 +55,7 @@ export default function Home() {
                     <div className="mt-6 flex items-center justify-center gap-2">
                       Source Code from Here: &nbsp;
                       <a
-                        href="http://"
+                        href="https://github.com/jarko1985/auth-system"
                         target="blank"
                         rel="noopener noreferrer"
                         className="text-4xl"

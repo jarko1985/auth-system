@@ -12,6 +12,7 @@ import zxcvbn from "zxcvbn";
 import SlideButton from "../buttons/SlideButton";
 import axios from "axios";
 import { toast } from "react-toastify";
+import Link from "next/link";
 
 interface IRegisterFormProps {}
 
@@ -78,7 +79,20 @@ const RegisterForm: React.FunctionComponent<IRegisterFormProps> = (props) => {
     setPasswordScore(validatePasswordStrength());
   }, [watch().password]);
   return (
-    <>
+    <div className="w-full px-12 py-4">
+      <h2 className="text-center text-2xl font-bold tracking-wide text-gray-800">
+        Sign Up
+      </h2>
+      <p className="text-center text-gray-600 mt-2 space-x-2">
+        Already have an account? &nbsp;
+        <Link
+          href="/auth"
+          className="text-blue-600 hover:text-blue-700 hover:underline cursor-pointer"
+        >
+          Sign in
+        </Link>
+      </p>
+
       <form className="my-8 text-sm" onSubmit={handleSubmit(onSubmit)}>
         <div className="gap-2 md:flex">
           <Input
@@ -200,7 +214,7 @@ const RegisterForm: React.FunctionComponent<IRegisterFormProps> = (props) => {
           disabled={isSubmitting}
         />
       </form>
-    </>
+    </div>
   );
 };
 

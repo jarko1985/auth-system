@@ -58,6 +58,7 @@ export default async function handler(
     await sendMail(
       newuser.email,
       newuser.name,
+      "",
       url,
       "Activate your account - Jarko Store",
       activateTemplateEmail
