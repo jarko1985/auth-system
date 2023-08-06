@@ -4,7 +4,6 @@ import * as handlebars from "handlebars";
 export default async function sendMail(
   to: string,
   name: string,
-  image: string,
   url: string,
   subject: string,
   template: string
@@ -36,7 +35,6 @@ export default async function sendMail(
   const replacments = {
     name: name,
     email_link: url,
-    image: image,
   };
   const html = data(replacments);
   await new Promise((resolve, reject) => {
