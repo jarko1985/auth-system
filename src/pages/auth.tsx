@@ -33,7 +33,7 @@ export default function auth({
             <span className="text-sm uppercase mx-6 text-gray-400">Or</span>
             <div className="w-full h-[1px] bg-gray-300"></div>
           </div>
-          <div className="mt-3 grid grid-cols-2 gap-x-4 gap-y-2">
+          <div className="mt-3 grid  sm:grid-cols-1  md:grid-cols-2 gap-x-4 gap-y-2">
             {providers.map((provider: any) => {
               if (provider.name == "Credentials") return;
               return (
